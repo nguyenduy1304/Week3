@@ -1,0 +1,17 @@
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\DemoT3.Persistence.csproj.AssemblyReference.cache
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\DemoT3.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\DemoT3.Persistence.AssemblyInfoInputs.cache
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\DemoT3.Persistence.AssemblyInfo.cs
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\DemoT3.Persistence.csproj.CoreCompileInputs.cache
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\bin\Debug\net6.0\DemoT3.Persistence.deps.json
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\bin\Debug\net6.0\DemoT3.Persistence.runtimeconfig.json
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\bin\Debug\net6.0\DemoT3.Persistence.dll
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\bin\Debug\net6.0\DemoT3.Persistence.pdb
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\bin\Debug\net6.0\DemoT3.Contract.dll
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\bin\Debug\net6.0\DemoT3.Contract.pdb
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\DemoT3.Persistence.csproj.CopyComplete
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\DemoT3.Persistence.dll
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\refint\DemoT3.Persistence.dll
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\DemoT3.Persistence.pdb
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\DemoT3.Persistence.genruntimeconfig.cache
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Persistence\obj\Debug\net6.0\ref\DemoT3.Persistence.dll

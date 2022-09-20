@@ -1,9 +1,11 @@
-using DemoT3.DAL;
-using DemoT3.Domains;
-using DemoT3.Interfaces;
-using DemoT3.Repository;
-using DemoT3.Services;
+using DemoT3.Application.Interfaces;
+using DemoT3.Application.Services;
+using DemoT3.Application.Validation;
+using DemoT3.Contract.Requests;
+using DemoT3.Persistence.Domains;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +18,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 
 builder.Services.AddScoped<IUserSevice, UserService>();
-
+builder.Services.AddScoped<IValidator<CreateUserRequest>, UserValidation>();
 
 
 var app = builder.Build();

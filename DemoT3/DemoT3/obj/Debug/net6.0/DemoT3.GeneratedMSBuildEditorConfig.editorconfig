@@ -8,45 +8,53 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DemoT3
 build_property.RootNamespace = DemoT3
-build_property.ProjectDir = C:\NguyenThanhDuy\DemoT3\DemoT3\
+build_property.ProjectDir = C:\NguyenThanhDuy\Week3\DemoT3\DemoT3\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\NguyenThanhDuy\DemoT3\DemoT3
+build_property.MSBuildProjectDirectory = C:\NguyenThanhDuy\Week3\DemoT3\DemoT3
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/NguyenThanhDuy/DemoT3/DemoT3/Views/Home/AddUser.cshtml]
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Component/Sample/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50XFNhbXBsZVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Home/AddUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/NguyenThanhDuy/DemoT3/DemoT3/Views/Home/Index.cshtml]
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Home/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/NguyenThanhDuy/DemoT3/DemoT3/Views/Home/PartialViewUser.cshtml]
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Home/PartialViewUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXJ0aWFsVmlld1VzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/NguyenThanhDuy/DemoT3/DemoT3/Views/Home/Privacy.cshtml]
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/NguyenThanhDuy/DemoT3/DemoT3/Views/Shared/Error.cshtml]
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/NguyenThanhDuy/DemoT3/DemoT3/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/NguyenThanhDuy/DemoT3/DemoT3/Views/_ViewImports.cshtml]
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/NguyenThanhDuy/DemoT3/DemoT3/Views/_ViewStart.cshtml]
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/NguyenThanhDuy/DemoT3/DemoT3/Views/Shared/_Layout.cshtml]
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ygi806mcxy

@@ -1,0 +1,12 @@
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\bin\Debug\net6.0\DemoT3.Contract.deps.json
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\bin\Debug\net6.0\DemoT3.Contract.dll
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\bin\Debug\net6.0\DemoT3.Contract.pdb
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\obj\Debug\net6.0\DemoT3.Contract.csproj.AssemblyReference.cache
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\obj\Debug\net6.0\DemoT3.Contract.GeneratedMSBuildEditorConfig.editorconfig
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\obj\Debug\net6.0\DemoT3.Contract.AssemblyInfoInputs.cache
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\obj\Debug\net6.0\DemoT3.Contract.AssemblyInfo.cs
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\obj\Debug\net6.0\DemoT3.Contract.csproj.CoreCompileInputs.cache
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\obj\Debug\net6.0\DemoT3.Contract.dll
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\obj\Debug\net6.0\refint\DemoT3.Contract.dll
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\obj\Debug\net6.0\DemoT3.Contract.pdb
+C:\NguyenThanhDuy\Week3\DemoT3\DemoT3.Contract\obj\Debug\net6.0\ref\DemoT3.Contract.dll

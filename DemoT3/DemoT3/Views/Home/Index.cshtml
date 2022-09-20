@@ -1,7 +1,12 @@
-﻿@{
+﻿@model IEnumerable<DemoT3.Domains.User>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    @await Html.PartialAsync("PartialViewUser")
+    
+    @{
+        Html.RenderPartial("PartialViewUser", Model);
+    }
+    
 </div>

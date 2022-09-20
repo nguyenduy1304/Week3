@@ -1,4 +1,5 @@
 ﻿using DemoT3.Domains;
+using DemoT3.Persistence.Domains;
 using DemoT3.Repository;
 using Microsoft.EntityFrameworkCore;
 

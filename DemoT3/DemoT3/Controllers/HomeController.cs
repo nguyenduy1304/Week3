@@ -1,7 +1,13 @@
-﻿using DemoT3.Interfaces;
+﻿using DemoT3.Application.Interfaces;
+using DemoT3.Contract.Requests;
 using DemoT3.Models;
-using DemoT3.Repository;
+using DemoT3.Persistence.Domains;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
+using System;
+
 using System.Data;
 using System.Diagnostics;
 
@@ -13,19 +19,28 @@ namespace DemoT3.Controllers
 
         private readonly IUserSevice _userSevice;
 
+        private IValidator<CreateUserRequest> _validator;
+
+        private ApplicationDbContext _context;
         public HomeController(ILogger<HomeController> logger,
-                                  IUserSevice userSevice)
+                                  IUserSevice userSevice,
+                                  ApplicationDbContext context,
+                                  IValidator<CreateUserRequest> validator)
         {
             _logger = logger;
             _userSevice = userSevice;
+            _context = context;
+            _validator = validator;
+
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(_userSevice.GetUsers());
         }
-        
-        public PartialViewResult PartialViewUser()
+
+
+        public ActionResult PartialViewUser()
         {
             var users = _userSevice.GetUsers();
             return PartialView(users);
@@ -39,23 +54,40 @@ namespace DemoT3.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddUser(CreateUserRequest createUserRequest)
         {
+            ValidationResult result = _validator.Validate(createUserRequest);
             try
             {
-                if (ModelState.IsValid)
+                if (!result.IsValid)
                 {
-
-                    _userSevice.CreateUser(createUserRequest);
-
-                    _logger.LogInformation("Create new user successfully.");
-
-                    return RedirectToAction("Index");
+                    result.AddToModelState(this.ModelState);
+                    return View("AddUser", createUserRequest);
 
                 }
-                else
+                var userName = _context.User.SingleOrDefault(u => u.Username == createUserRequest.Username);
+                var email = _context.User.SingleOrDefault(e => e.Email == createUserRequest.Email);
+                if (userName != null && email != null)
                 {
-                    ViewBag.Error = "Create new user Failed";
-                    return View(createUserRequest);
+                    ViewBag.Error = "Username and Email exist";
+                    return View();
                 }
+                if (userName != null)
+                {
+                    ViewBag.Error = "Username exist";
+                    return View();
+                }
+                if (email != null)
+                {
+                    ViewBag.Error = "Email exist";
+                    return View();
+                }
+
+                _userSevice.CreateUser(createUserRequest);
+
+                _logger.LogInformation("Create new user successfully.");
+
+                return RedirectToAction("Index");
+
+
 
             }
             catch (DataException)
@@ -63,15 +95,30 @@ namespace DemoT3.Controllers
                 _logger.LogError("Create new user Failed");
                 return View();
             }
+
         }
 
-
-
-
-
-
-
-
+        [HttpGet]
+        public IActionResult EditUser(String id)
+        {
+            var userid = _userSevice.GetUserByID(id);
+            return View(userid);
+        }
+        
+        public IActionResult Delete(String id)
+        {
+            try
+            {
+                _userSevice.DeleteUser(id);
+                _logger.LogInformation("Delete user successfully");
+                return RedirectToAction("Index");
+            }
+            catch (DataException)
+            {
+                ViewBag.Error = "Delete user Failed";
+                return View();
+            }
+        }
 
         public IActionResult Privacy()
         {
