@@ -28,4 +28,8 @@
     <ProjectReference Include="..\DemoT3.Persistence\DemoT3.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Users\" />
+  </ItemGroup>
+
 </Project>

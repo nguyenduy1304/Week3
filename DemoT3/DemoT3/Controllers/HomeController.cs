@@ -1,5 +1,7 @@
-﻿using DemoT3.Application.Interfaces;
+﻿using AutoMapper;
+using DemoT3.Application.Interfaces;
 using DemoT3.Contract.Requests;
+using DemoT3.Domains;
 using DemoT3.Models;
 using DemoT3.Persistence.Domains;
 using FluentValidation;
@@ -21,16 +23,20 @@ namespace DemoT3.Controllers
 
         private IValidator<CreateUserRequest> _validator;
 
+        public readonly IMapper _mapper;
+
         private ApplicationDbContext _context;
         public HomeController(ILogger<HomeController> logger,
                                   IUserSevice userSevice,
                                   ApplicationDbContext context,
-                                  IValidator<CreateUserRequest> validator)
+                                  IValidator<CreateUserRequest> validator,
+                                  IMapper mapper)
         {
             _logger = logger;
             _userSevice = userSevice;
             _context = context;
             _validator = validator;
+            _mapper = mapper;
 
         }
 
@@ -38,8 +44,7 @@ namespace DemoT3.Controllers
         {
             return View(_userSevice.GetUsers());
         }
-
-
+       
         public ActionResult PartialViewUser()
         {
             var users = _userSevice.GetUsers();
@@ -101,10 +106,21 @@ namespace DemoT3.Controllers
         [HttpGet]
         public IActionResult EditUser(String id)
         {
-            var userid = _userSevice.GetUserByID(id);
+            var userid = _userSevice.GetEditUserRequest(id);
+            ViewBag.UserId = id;
+           
             return View(userid);
         }
-        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditUsers(EditUserRequest editUserRequest, String id)
+        {
+            ViewBag.UserId = id;
+            _userSevice.UpdateUser(editUserRequest, id);
+            return RedirectToAction("Index");
+
+        }
+
         public IActionResult Delete(String id)
         {
             try

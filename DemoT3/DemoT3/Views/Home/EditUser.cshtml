@@ -1,4 +1,4 @@
-﻿@model DemoT3.Domains.User
+﻿@model DemoT3.Contract.Requests.EditUserRequest
 
 @{
     ViewData["Title"] = "EditUser";
@@ -9,9 +9,9 @@
 <hr />
 <div class="row">
     <div class="form-group">
-        <form asp-action="EditUser">
+        <form asp-action="EditUsers">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" /><input type="hidden" asp-for="UserDetail.Id" />
+            <input type="hidden" name="id" value="@ViewBag.UserId"/>
             <div class="form-group">
                 <label asp-for="Username" class="control-label"></label>
                 <input asp-for="Username" class="form-control" />
@@ -29,27 +29,27 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="UserDetail.FirstName" class="control-label"></label>
-                <input asp-for="UserDetail.FirstName" class="form-control" />
-                <span asp-validation-for="UserDetail.FirstName" class="text-danger"></span>
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="UserDetail.LastName" class="control-label"></label>
-                <input asp-for="UserDetail.LastName" class="form-control" />
-                <span asp-validation-for="UserDetail.LastName" class="text-danger"></span>
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="UserDetail.PhoneNumber" class="control-label"></label>
-                <input asp-for="UserDetail.PhoneNumber" class="form-control" />
-                <span asp-validation-for="UserDetail.PhoneNumber" class="text-danger"></span>
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="UserDetail.Address" class="control-label"></label>
-                <input asp-for="UserDetail.Address" class="form-control" />
-                <span asp-validation-for="UserDetail.Address" class="text-danger"></span>
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">

@@ -1,4 +1,6 @@
-﻿using DemoT3.Application.Interfaces;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using DemoT3.Application.Interfaces;
 using DemoT3.Contract.Requests;
 using DemoT3.Domains;
 using DemoT3.Persistence.Domains;
@@ -11,35 +13,26 @@ namespace DemoT3.Application.Services
     {
         private ApplicationDbContext _context;
 
+        public readonly IMapper _mapper;
 
-        public UserService( ApplicationDbContext context)
+        public UserService( ApplicationDbContext context,
+                            IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
 
         public string CreateUser(CreateUserRequest createUserRequest)
         {
-            var user = new User
-            {
-                Id = Guid.NewGuid().ToString(),
-                Username = createUserRequest.Username,
-                Email = createUserRequest.Email,
-                Password = createUserRequest.Password,
-            };
-            _context.User.Add(user);
+            var _mappedUser = _mapper.Map<User>(createUserRequest);
 
-            var userDetail = new UserDetail
-            {
-                FirstName = createUserRequest.FirstName,
-                LastName = createUserRequest.LastName,
-                PhoneNumber = createUserRequest.PhoneNumber,
-                Address = createUserRequest.Address,
-                IdUser = user.Id,
-            };
-            _context.UserDetail.Add(userDetail);
+            _mappedUser.Id = Guid.NewGuid().ToString();
+            _mappedUser.UserDetail.IdUser = _mappedUser.Id;
+
+            _context.User.Add(_mappedUser);
             _context.SaveChanges();
-            return user.Id;
+            return _mappedUser.Id;
 
         }
 
@@ -60,9 +53,18 @@ namespace DemoT3.Application.Services
             return _context.User.Include(c => c.UserDetail).AsNoTracking().ToList();
         }
 
-        public void UpdateUser(User user)
+        public void UpdateUser(EditUserRequest editUserRequest, String id)
         {
-            
+            var user = GetUserByID(id);
+            user = _mapper.Map<EditUserRequest, User>(editUserRequest, user);
+            _context.SaveChanges();
+        }
+
+        public EditUserRequest GetEditUserRequest(string id)
+        {
+            var user = _context.User.Include(c => c.UserDetail).SingleOrDefault(c => c.Id.Equals(id));
+            return _mapper.Map<EditUserRequest>(user);
+             
         }
     }
 

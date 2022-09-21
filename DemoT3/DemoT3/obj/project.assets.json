@@ -3548,6 +3548,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "DemoT3.Contract": "1.0.0",
           "DemoT3.Persistence": "1.0.0",
           "FluentValidation.AspNetCore": "11.2.2",

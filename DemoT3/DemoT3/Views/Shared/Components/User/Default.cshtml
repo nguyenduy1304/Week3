@@ -1,0 +1,49 @@
+﻿
+<h1>This is view component </h1>
+<p>
+    <a asp-action="AddUser">Create New User</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password </th>
+            <th>FullName </th>
+            <th>PhoneNumber </th>
+            <th>Address </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Username
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    @item.Password
+                </td>
+                <td>
+                    @item.UserDetail.FirstName @item.UserDetail.LastName
+                </td>
+                <td>
+                    @item.UserDetail.PhoneNumber
+                </td>
+                <td>
+                    @item.UserDetail.Address
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "EditUser", new { id =item.Id}) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

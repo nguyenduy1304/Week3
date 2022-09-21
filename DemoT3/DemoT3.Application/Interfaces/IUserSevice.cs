@@ -9,6 +9,8 @@ namespace DemoT3.Application.Interfaces
         User GetUserByID(String id);
         String CreateUser(CreateUserRequest createUserRequest);
         void DeleteUser(String userid);
-        void UpdateUser(User user);
+        void UpdateUser(EditUserRequest editUserRequest, String id);
+
+        EditUserRequest GetEditUserRequest(String id);
     }
 }

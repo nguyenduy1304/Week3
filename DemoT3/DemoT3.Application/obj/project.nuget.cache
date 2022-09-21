@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "TbYefEPrFfiA2tRKjzJz5XqMcfPmMXH1wXEs4E4wS7Slukn2HBK4beXWBNRtfG4n+UsVjBi4kGQgbfuc8St4yg==",
+  "dgSpecHash": "l5DjCFTJ1x8czO5HCemUC+T/QoSguRQIbyxPXrmIfg4Hrh8u+KTBkhE28WwV22iMXMZ4nwE0qSm0Ns0CCmZv7A==",
   "success": true,
   "projectFilePath": "C:\\NguyenThanhDuy\\Week3\\DemoT3\\DemoT3.Application\\DemoT3.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\duy.nguyen\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\duy.nguyen\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",

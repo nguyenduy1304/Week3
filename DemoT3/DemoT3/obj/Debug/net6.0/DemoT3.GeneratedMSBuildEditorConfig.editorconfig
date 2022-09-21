@@ -15,10 +15,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\NguyenThanhDuy\Week3\DemoT3\DemoT3
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Component/Sample/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50XFNhbXBsZVxEZWZhdWx0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Home/AddUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -37,6 +33,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Shared/Components/User/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVXNlclxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/NguyenThanhDuy/Week3/DemoT3/DemoT3/Views/Shared/Error.cshtml]
