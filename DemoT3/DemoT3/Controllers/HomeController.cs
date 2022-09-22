@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DemoT3.Application.Interfaces;
+using DemoT3.Contract.Constant;
 using DemoT3.Contract.Requests;
 using DemoT3.Domains;
 using DemoT3.Models;
@@ -8,8 +9,6 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using System;
-
 using System.Data;
 using System.Diagnostics;
 
@@ -40,11 +39,16 @@ namespace DemoT3.Controllers
 
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? pageNumber)
         {
-            return View(_userSevice.GetUsers());
+            int pageSize = 2;
+            return View(PaginatedList<User>.CreateAsync(_userSevice.GetUsers(), pageNumber ?? 1, pageSize));
         }
-       
+        public IActionResult IndexVC()
+        {
+            var users = _userSevice.GetUsers();
+            return ViewComponent("User", users);
+        }
         public ActionResult PartialViewUser()
         {
             var users = _userSevice.GetUsers();
@@ -92,15 +96,12 @@ namespace DemoT3.Controllers
 
                 return RedirectToAction("Index");
 
-
-
             }
             catch (DataException)
             {
                 _logger.LogError("Create new user Failed");
                 return View();
             }
-
         }
 
         [HttpGet]

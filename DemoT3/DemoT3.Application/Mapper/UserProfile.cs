@@ -59,8 +59,28 @@ namespace DemoT3.Application.Mapper
                 .ForPath(
                     dest => dest.Address,
                     opt => opt.MapFrom(s => s.UserDetail.Address)
+                );
+            CreateMap<User, GetUserRequest>()
+                .ForPath(
+                    dest => dest.FirstName,
+                    opt => opt.MapFrom(s => s.UserDetail.FirstName)
                 )
-                ;
+                .ForPath(
+                    dest => dest.LastName,
+                    opt => opt.MapFrom(s => s.UserDetail.LastName)
+                )
+                .ForPath(
+                    dest => dest.PhoneNumber,
+                    opt => opt.MapFrom(s => s.UserDetail.PhoneNumber)
+                )
+                .ForPath(
+                    dest => dest.Address,
+                    opt => opt.MapFrom(s => s.UserDetail.Address)
+                )
+                .ForPath(
+                    dest => dest.IdUser,
+                    opt => opt.MapFrom(s => s.UserDetail.IdUser)
+                );
         }
     }
 }

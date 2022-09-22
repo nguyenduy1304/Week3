@@ -18,7 +18,7 @@ namespace DemoT3.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            return View(_userSevice.GetUsers());
+            return View("UserComponent", _userSevice.GetUsers());
         }
     }
 }

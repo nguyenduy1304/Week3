@@ -1,5 +1,5 @@
 ﻿
-<h1>This is PartialViewResult</h1>
+<h1>This is view component </h1>
 <p>
     <a asp-action="AddUser">Create New User</a>
 </p>
@@ -55,25 +55,11 @@
 <a asp-action="Index"
    asp-route-pageNumber="@(Model.PageIndex - 1)"
    class="btn btn-default @prevDisabled">
-    &laquo;
+    Previous
 </a>
-
-@for (int i = 1; i < Model.TotalPages + 1; i++)
-{
-    if (Model.PageIndex == i)
-    {
-        <b class="pagefocus">@i.ToString()</b>
-    }
-    else
-    {
-        <a 
-            asp-action="Index" asp-route-pageNumber="@i.ToString()" class="pagenum"> @i.ToString()
-        </a>
-    }
-}
 
 <a asp-action="Index"
    asp-route-pageNumber="@(Model.PageIndex + 1)"
    class="btn btn-default @nextDisabled">
-    &raquo;
+    Next
 </a>
