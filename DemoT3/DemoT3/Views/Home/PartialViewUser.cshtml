@@ -1,7 +1,7 @@
 ﻿
 <h1>This is PartialViewResult</h1>
 <p>
-    <a asp-action="AddUser">Create New User</a>
+    <a asp-action="AddUser" style="background-color:darkgoldenrod; text-decoration:none;color:#fff; padding:5px">Create New User</a>
 </p>
 
 <table class="table">
@@ -47,17 +47,17 @@
         }
     </tbody>
 </table>
+
+
 @{
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
-
 <a asp-action="Index"
    asp-route-pageNumber="@(Model.PageIndex - 1)"
    class="btn btn-default @prevDisabled">
     &laquo;
 </a>
-
 @for (int i = 1; i < Model.TotalPages + 1; i++)
 {
     if (Model.PageIndex == i)
@@ -71,7 +71,6 @@
         </a>
     }
 }
-
 <a asp-action="Index"
    asp-route-pageNumber="@(Model.PageIndex + 1)"
    class="btn btn-default @nextDisabled">

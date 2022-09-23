@@ -16,9 +16,9 @@ namespace DemoT3.ViewComponents
         {
             _userSevice = userSevice;
         }
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(int? pageNumber)
         {
-            return View("UserComponent", _userSevice.GetUsers());
+            return View("UserComponent", _userSevice.GetUsers(pageNumber ?? 1));
         }
     }
 }

@@ -41,18 +41,16 @@ namespace DemoT3.Controllers
 
         public IActionResult Index(int? pageNumber)
         {
-            int pageSize = 2;
-            return View(PaginatedList<User>.CreateAsync(_userSevice.GetUsers(), pageNumber ?? 1, pageSize));
+            return View(_userSevice.GetUsers(pageNumber ?? 1));
         }
-        public IActionResult IndexVC()
+        public IActionResult IndexVC(int? pageNumber)
         {
-            var users = _userSevice.GetUsers();
+            var users = _userSevice.GetUsers(pageNumber ?? 1);
             return ViewComponent("User", users);
         }
-        public ActionResult PartialViewUser()
+        public ActionResult PartialViewUser(int? pageNumber)
         {
-            var users = _userSevice.GetUsers();
-            return PartialView(users);
+            return PartialView(_userSevice.GetUsers(pageNumber ?? 1));
         }
         public IActionResult AddUser()
         {

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using DemoT3.Application.Interfaces;
+using DemoT3.Contract.Constant;
 using DemoT3.Contract.Requests;
 using DemoT3.Domains;
 using DemoT3.Persistence.Domains;
@@ -48,9 +49,11 @@ namespace DemoT3.Application.Services
             return _context.User.Include(c => c.UserDetail).SingleOrDefault(c => c.Id.Equals(id));
         }
 
-        public IEnumerable<User> GetUsers()
+        public IEnumerable<User> GetUsers(int? pageNumber)
         {
-            return _context.User.Include(c => c.UserDetail).AsNoTracking().ToList();
+            int pageSize = 2;
+            var user = _context.User.Include(c => c.UserDetail).AsNoTracking().ToList();
+            return PaginatedList<User>.CreateAsync(user, pageNumber ?? 1, pageSize);
         }
 
         public void UpdateUser(EditUserRequest editUserRequest, String id)
